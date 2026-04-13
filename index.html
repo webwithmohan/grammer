@@ -29,7 +29,7 @@
             padding: 10px;
             border-radius: 10px;
         }
-        main:nth-child(3){
+        .ver{
             background-color: rgb(165, 153, 234);
             margin-top: 10px;
 
@@ -61,31 +61,44 @@
             color: white;
             font-weight: bold;
         }
+        @media(max-width:600px){
+            .container{
+                display: flex;
+                
+            }
+            .vo{
+                width: 40%;
+            }
+            .ver{
+                width: 40%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Grammer</h1>
-        <main>
+        
+        <main class="vo">
             <h3>Vocabulary</h3>
-            <p>1.Pity --> வணக்கம்</p>
+            <p>1.Pity --> </p>
             <p>2.Hell</p>
             <p>3.curse</p>
             <p>4.Stink</p>
         </main>
-        <main>
+        <main class="ver">
             <h3>Verbs</h3>
             <p>1.Writing</p>
             <p>2.Eating</p>
             <p>3.Playing</p>
             <p>4.Running</p>
         </main>
-        <div class="btns">
+       
+    </div>
+     <div class="btns">
             <button class="cancelBtn">Cancel</button>
             <button class="goBtn">Go</button>
         </div>
-    </div>
 </body>
 
 </html>
