@@ -35,17 +35,108 @@
         padding: 10px;
         border-radius: 8px;
        }
+       .container >div {
+        background-color: blanchedalmond;
+        text-align: center;
+        padding: 10px;
+        background: linear-gradient(rgb(245, 208, 208),yellow);
+       }
+       h3{
+        font-size: 30px;
+        background:linear-gradient(to bottom,red 50%,blue 50%);
+        color: transparent;
+        background-clip: text;
+       }
+       .linear{
+        background-color: teal;
+        height: 300px;
+        width: 300px;
+        margin: 20px;
+      
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px teal;
+       }
+      
+      
+        
        
+       table{
+        border-collapse:collapse ;
+        width: 50%;
+        cellpadding:10px;
+        cellspacing:10px;
+        text-align: center;
+        margin: 20px;
+       }
+       td,th{
+        padding: 10px;
+       }
+        tr:nth-of-type(odd){
+        background-color: rgb(228, 182, 182);
+       }
     </style>
 </head>
 
 <body>
     <div class="container">
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fuga expedita ea aliquam dolorem nostrum tenetur sed repudiandae perspiciatis nemo recusandae, odit amet deserunt optio!</p>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fuga expedita ea aliquam dolorem nostrum tenetur sed repudiandae perspiciatis nemo recusandae, odit amet deserunt optio!</p>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fuga expedita ea aliquam dolorem nostrum tenetur sed repudiandae perspiciatis nemo recusandae, odit amet deserunt optio!</p>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fuga expedita ea aliquam dolorem nostrum tenetur sed repudiandae perspiciatis nemo recusandae, odit amet deserunt optio!</p>
+       
+      <div>
+        <h3>Java</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fuga expedita ea aliquam dolorem nostrum tenetur sed repudiandae perspiciatis nemo recusandae, odit amet deserunt optio!</p></div>
+      <div><h3>Html</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fuga expedita ea aliquam dolorem nostrum tenetur sed repudiandae perspiciatis nemo recusandae, odit amet deserunt optio!</p></div>
+      <div><h3>Css</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fuga expedita ea aliquam dolorem nostrum tenetur sed repudiandae perspiciatis nemo recusandae, odit amet deserunt optio!</p></div>
+      <div><h3>Python</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fuga expedita ea aliquam dolorem nostrum tenetur sed repudiandae perspiciatis nemo recusandae, odit amet deserunt optio!</p></div>
     </div>
+    <div class="linear">
+        
+    </div>
+    <table border="1px" >
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Mohan</td>
+            <td>19</td>
+            <td>Tirupathur</td>
+        </tr>
+         <tr>
+            <td>Mohan</td>
+            <td>20</td>
+            <td rowspan="2">Krishnagiri</td>
+        </tr>
+         <tr>
+            <td>Mohan</td>
+            <td>20</td>
+            
+        </tr>
+        <tr>
+            <td>Mohan</td>
+            <td>20</td>
+            <td>Tamil Nadu</td>
+        </tr>
+        <p id="battery"></p>
+
+    </table>
+    <script>
+    navigator.getBattery().then(function(battery){
+        function update(){
+            document.getElementById("battery").innerHTML="Batter level is    :"+battery.level*100 +battery.charging;
+        }
+        update();
+
+        battery.onlevelchange=update;
+        battery.onchargingchange=update;
+
+        
+    })
+        
+    </script>
+
+    
 </body>
 
 </html>
