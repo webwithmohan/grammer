@@ -10,95 +10,36 @@
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
-        }
+       }
+       .container{
+        display: flex;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
 
-        .container {
-            margin: 10px;
-        }
-
-        p {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-        main{
-            background-color: rgb(199, 244, 202);
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .ver{
-            background-color: rgb(165, 153, 234);
-            margin-top: 10px;
-
-        }
-        .btns{
-            background-color: rgb(219, 234, 239);
-            padding: 10px;
-            margin-top: 10px;
-            display: flex;
-            justify-content: space-between;
-            border-radius: 10px;
-        }
+     
+       }
+       .item{
+        flex: 0 0 100%;
+        height: 200px;
+        scroll-snap-type: start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
         
-        button{
-            border: none;
-            outline: none;
-            padding: 10px;
-            border-radius: 5px;
-            width: 100px;
-            height: 40px;
-        }
-        .cancelBtn{
-            background-color: red;
-            color: white;
-            font-weight: bold;
-        }
-         .goBtn{
-            background-color: rgb(13, 227, 109);
-            color: white;
-            font-weight: bold;
-        }
-        @media(max-width:600px){
-            .container{
-                display: flex;
-                
-            }
-            .vo{
-                width: 40%;
-            }
-            .ver{
-                width: 40%;
-            }
-        }
+       }
     </style>
 </head>
 
 <body>
     <div class="container">
-        
-        <main class="vo">
-            <h3>Vocabulary</h3>
-            <p>1.Pity --> </p>
-            <p>2.Hell</p>
-            <p>3.curse</p>
-            <p>4.Stink</p>
-        </main>
-        <main class="ver">
-            <h3>Verbs</h3>
-            <p>1.Writing</p>
-            <p>2.Eating</p>
-            <p>3.Playing</p>
-            <p>4.Running</p>
-        </main>
-       
+        <div class="item">Box 1</div>
+        <div class="item">Box 2</div>
+        <div class="item">Box 31</div>
+        <div class="item">Box 4</div>
+        <div class="item">Box 5</div>
     </div>
-     <div class="btns">
-            <button class="cancelBtn">Cancel</button>
-            <button class="goBtn">Go</button>
-        </div>
 </body>
 
 </html>
